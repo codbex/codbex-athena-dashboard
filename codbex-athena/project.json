@@ -1,0 +1,27 @@
+{
+    "guid": "codbex-athena",
+    "dependencies": [
+        {
+            "guid": "codbex-account",
+            "type": "git",
+            "url": "https://github.com/codbex/codbex-accounts.git",
+            "branch": "main"
+        }
+    ],
+    "actions": [
+        {
+            "name": "Build TypeScript",
+            "commands": [
+                {
+                    "os": "unix",
+                    "command": "tsc"
+                },
+                {
+                    "os": "windows",
+                    "command": "cmd /c tsc"
+                }
+            ],
+            "registry": "true"
+        }
+    ]
+}
