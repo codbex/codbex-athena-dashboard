@@ -1,0 +1,82 @@
+{
+    "schema": {
+        "structures": [
+            {
+                "name": "CODBEX_ATHENA_JOURNALENTRIES",
+                "type": "TABLE",
+                "columns": [
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "primaryKey": true,
+                        "identity": true,
+                        "nullable": true,
+                        "name": "JOURNALENTRIES_ID"
+                    },
+                    {
+                        "type": "DATE",
+                        "precision": "NaN",
+                        "scale": "NaN",
+                        "name": "JOURNALENTRIES_DATE"
+                    },
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "precision": "NaN",
+                        "scale": "NaN",
+                        "nullable": true,
+                        "name": "JOURNALENTRIES_ACCOUNT"
+                    },
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "precision": "NaN",
+                        "scale": "NaN",
+                        "nullable": true,
+                        "name": "JOURNALENTRIES_JOURNALENTRYDIRECTIONS"
+                    }
+                ]
+            },
+            {
+                "name": "CODBEX_ATHENA_JOURNALENTRYDIRECTIONS",
+                "type": "TABLE",
+                "columns": [
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "primaryKey": true,
+                        "identity": true,
+                        "nullable": true,
+                        "name": "JOURNALENTRYDIRECTIONS_ID"
+                    },
+                    {
+                        "type": "VARCHAR",
+                        "length": 200,
+                        "precision": "NaN",
+                        "scale": "NaN",
+                        "name": "JOURNALENTRYDIRECTIONS_NAME"
+                    }
+                ]
+            },
+            {
+                "name": "JournalEntries_Account",
+                "type": "foreignKey",
+                "table": "CODBEX_ATHENA_JOURNALENTRIES",
+                "constraintName": "JournalEntries_Account",
+                "columns": "JOURNALENTRIES_ACCOUNT",
+                "referencedTable": "CODBEX_ATHENA_ACCOUNT",
+                "referencedColumns": "ACCOUNT_ID"
+            },
+            {
+                "name": "JournalEntries_JournalEntryDirections",
+                "type": "foreignKey",
+                "table": "CODBEX_ATHENA_JOURNALENTRIES",
+                "constraintName": "JournalEntries_JournalEntryDirections",
+                "columns": "JOURNALENTRIES_JOURNALENTRYDIRECTIONS",
+                "referencedTable": "CODBEX_ATHENA_JOURNALENTRYDIRECTIONS",
+                "referencedColumns": "JOURNALENTRYDIRECTIONS_ID"
+            }
+        ]
+    },
+    "datasource": "DefaultDB"
+}

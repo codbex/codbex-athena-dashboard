@@ -1,0 +1,5 @@
+{
+    "module": "codbex-athena/gen/ui/launchpad/menu-help.js",
+    "extensionPoint": "codbex-athena-menu",
+    "description": "codbex-athena - Application Menu"
+}

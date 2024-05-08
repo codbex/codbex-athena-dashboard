@@ -150,7 +150,7 @@
                         "calculatedPropertyExpressionUpdate": "",
                         "dataAutoIncrement": "false",
                         "dataDefaultValue": "",
-                        "dataLength": "",
+                        "dataLength": "20",
                         "dataName": "JOURNALENTRIES_DATE",
                         "dataNullable": "false",
                         "dataPrecision": "NaN",

@@ -1,0 +1,15 @@
+{
+  "files": [
+    {
+      "table": "CODBEX_ATHENA_JOURNALENTRYDIRECTIONS",
+      "schema": "PUBLIC",
+      "file": "/codbex-athena-data",
+      "header": true,
+      "useHeaderNames": true,
+      "delimField": ",",
+      "delimEnclosing": "\"",
+      "distinguishEmptyFromNull": true,
+      "version": "1.0.0"
+    }
+  ]
+}
