@@ -9,10 +9,10 @@ externalDocs:
 servers:
   - url: /services/ts
 tags:
-  - name: entities
+  - name: JournalEntry
   - name: entities
 paths:
-  /codbex-athena/gen/api/entities/JournalEntriesService.ts:
+  /codbex-athena/gen/api/JournalEntry/JournalEntriesService.ts:
     get:
       summary: List JournalEntries
       parameters:
@@ -33,7 +33,7 @@ paths:
             type: integer
             allowEmptyValue: true
       tags:
-        - entities
+        - JournalEntry
       responses:
         200:
           description: Successful Request
@@ -64,7 +64,7 @@ paths:
     post:
       summary: Create JournalEntries
       tags:
-        - entities
+        - JournalEntry
       requestBody:
         content:
           application/json:
@@ -96,7 +96,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /codbex-athena/gen/api/entities/JournalEntriesService.ts/{id}:
+  /codbex-athena/gen/api/JournalEntry/JournalEntriesService.ts/{id}:
     get:
       summary: Get JournalEntries by Id
       parameters:
@@ -107,7 +107,7 @@ paths:
           schema:
             type: string
       tags:
-        - entities
+        - JournalEntry
       responses:
         200:
           description: Successful Request
@@ -145,7 +145,7 @@ paths:
           schema:
             type: string
       tags:
-        - entities
+        - JournalEntry
       requestBody:
         content:
           application/json:
@@ -193,7 +193,7 @@ paths:
           schema:
             type: string
       tags:
-        - entities
+        - JournalEntry
       responses:
         204:
           description: Successful Request
@@ -215,11 +215,11 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /codbex-athena/gen/api/entities/JournalEntriesService.ts/count:
+  /codbex-athena/gen/api/JournalEntry/JournalEntriesService.ts/count:
     get:
       summary: Count the number of JournalEntries
       tags:
-        - entities
+        - JournalEntry
       responses:
         200:
           description: Successful Request
@@ -243,7 +243,7 @@ paths:
     post:
       summary: Count the number of JournalEntries by JournalEntriesFilterOptions
       tags:
-        - entities
+        - JournalEntry
       requestBody:
         content:
           application/json:
@@ -317,11 +317,11 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /codbex-athena/gen/api/entities/JournalEntriesService.ts/search:
+  /codbex-athena/gen/api/JournalEntry/JournalEntriesService.ts/search:
     post:
       summary: Search JournalEntries by JournalEntriesFilterOptions
       tags:
-        - entities
+        - JournalEntry
       requestBody:
         content:
           application/json:

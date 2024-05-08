@@ -1,6 +1,6 @@
 angular.module('page', ["ideUI", "ideView"])
 	.config(["messageHubProvider", function (messageHubProvider) {
-		messageHubProvider.eventIdPrefix = 'codbex-athena.entities.JournalEntries';
+		messageHubProvider.eventIdPrefix = 'codbex-athena.JournalEntry.JournalEntries';
 	}])
 	.controller('PageController', ['$scope', 'messageHub', 'ViewParameters', function ($scope, messageHub, ViewParameters) {
 

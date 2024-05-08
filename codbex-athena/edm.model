@@ -226,10 +226,10 @@
                 "menuLabel": "JournalEntries",
                 "name": "JournalEntries",
                 "navigationPath": "/Home",
-                "perspectiveIcon": "/services/web/resources/unicons/copy.svg",
-                "perspectiveLabel": "Entities",
-                "perspectiveName": "entities",
-                "perspectiveOrder": "100",
+                "perspectiveIcon": "/services/web/resources/unicons/wind.svg",
+                "perspectiveLabel": "JournalEntry",
+                "perspectiveName": "JournalEntry",
+                "perspectiveOrder": "110",
                 "perspectiveRole": "",
                 "title": "JournalEntries",
                 "tooltip": "JournalEntries",
@@ -294,10 +294,25 @@
                 "perspectiveRole": "",
                 "title": "JournalEntryDirections",
                 "tooltip": "JournalEntryDirections",
-                "type": "PRIMARY"
+                "type": "SETTING"
             }
         ],
-        "perspectives": [],
+        "perspectives": [
+            {
+                "name": "Accounts",
+                "label": "Accounts",
+                "icon": "/services/web/resources/unicons/puzzle-piece.svg",
+                "order": "100",
+                "role": {}
+            },
+            {
+                "name": "JournalEntry",
+                "label": "JournalEntry",
+                "icon": "/services/web/resources/unicons/wind.svg",
+                "order": "110",
+                "role": {}
+            }
+        ],
         "navigations": []
     }
 }

@@ -4,10 +4,10 @@
  * Do not modify the content as it may be re-generated again.
  */
 const viewData = {
-    id: "JournalEntries-details",
-    label: "JournalEntries",
-    link: "/services/web/codbex-athena/gen/ui/entities/JournalEntries/dialog-window/index.html",
-    perspectiveName: "entities",
+    id: "JournalEntries-filter",
+    label: "JournalEntries Filter",
+    link: "/services/web/codbex-athena/gen/ui/JournalEntry/JournalEntries/dialog-filter/index.html",
+    perspectiveName: "JournalEntry",
 };
 
 if (typeof exports !== 'undefined') {

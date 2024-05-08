@@ -5,23 +5,32 @@
   "title": "Codbex Athena",
   "description": "Acounting Software",
   "addOpenApiInfo": true,
+  "fileName": "edm",
+  "dataSource": "DefaultDB",
   "projectName": "codbex-athena",
   "workspaceName": "workspace",
   "filePath": "edm.model",
   "templateId": "template-application-angular/template/template.js",
-  "fileName": "edm",
-  "dataSource": "DefaultDB",
   "perspectives": {
     "entities": {
       "views": [
         "Account",
-        "JournalEntries",
         "JournalEntryDirections"
       ],
       "name": "entities",
       "label": "entities",
       "order": "100",
       "icon": "/services/web/resources/unicons/copy.svg",
+      "role": ""
+    },
+    "JournalEntry": {
+      "views": [
+        "JournalEntries"
+      ],
+      "name": "JournalEntry",
+      "label": "JournalEntry",
+      "order": "110",
+      "icon": "/services/web/resources/unicons/wind.svg",
       "role": ""
     }
   },
@@ -219,7 +228,7 @@
           "calculatedPropertyExpressionUpdate": "",
           "dataAutoIncrement": false,
           "dataDefaultValue": "",
-          "dataLength": "",
+          "dataLength": "20",
           "dataName": "JOURNALENTRIES_DATE",
           "dataNullable": false,
           "dataPrecision": "NaN",
@@ -314,10 +323,10 @@
       "menuLabel": "JournalEntries",
       "name": "JournalEntries",
       "navigationPath": "/Home",
-      "perspectiveIcon": "/services/web/resources/unicons/copy.svg",
-      "perspectiveLabel": "Entities",
-      "perspectiveName": "entities",
-      "perspectiveOrder": "100",
+      "perspectiveIcon": "/services/web/resources/unicons/wind.svg",
+      "perspectiveLabel": "JournalEntry",
+      "perspectiveName": "JournalEntry",
+      "perspectiveOrder": "110",
       "perspectiveRole": "",
       "title": "JournalEntries",
       "tooltip": "JournalEntries",
@@ -408,7 +417,7 @@
       "perspectiveRole": "",
       "title": "JournalEntryDirections",
       "tooltip": "JournalEntryDirections",
-      "type": "PRIMARY",
+      "type": "SETTING",
       "dataSource": "DefaultDB",
       "referencedProjections": [],
       "primaryKeys": [

@@ -1,5 +1,5 @@
 {
-    "module": "codbex-athena/gen/ui/entities/JournalEntries/dialog-filter/view.js",
+    "module": "codbex-athena/gen/ui/JournalEntry/JournalEntries/dialog-filter/view.js",
     "extensionPoint": "codbex-athena-dialog-window",
     "description": "codbex-athena - Application Dialog Window"
 }

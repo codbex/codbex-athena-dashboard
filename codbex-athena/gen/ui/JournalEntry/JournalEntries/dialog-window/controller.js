@@ -1,9 +1,9 @@
 angular.module('page', ["ideUI", "ideView", "entityApi"])
 	.config(["messageHubProvider", function (messageHubProvider) {
-		messageHubProvider.eventIdPrefix = 'codbex-athena.entities.JournalEntries';
+		messageHubProvider.eventIdPrefix = 'codbex-athena.JournalEntry.JournalEntries';
 	}])
 	.config(["entityApiProvider", function (entityApiProvider) {
-		entityApiProvider.baseUrl = "/services/ts/codbex-athena/gen/api/entities/JournalEntriesService.ts";
+		entityApiProvider.baseUrl = "/services/ts/codbex-athena/gen/api/JournalEntry/JournalEntriesService.ts";
 	}])
 	.controller('PageController', ['$scope', 'messageHub', 'ViewParameters', 'entityApi', function ($scope, messageHub, ViewParameters, entityApi) {
 

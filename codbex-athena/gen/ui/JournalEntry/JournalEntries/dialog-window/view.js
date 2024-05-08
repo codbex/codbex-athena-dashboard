@@ -4,16 +4,14 @@
  * Do not modify the content as it may be re-generated again.
  */
 const viewData = {
-    id: "JournalEntries",
+    id: "JournalEntries-details",
     label: "JournalEntries",
-    factory: "frame",
-    region: "center",
-    link: "/services/web/codbex-athena/gen/ui/entities/JournalEntries/index.html",
-    perspectiveName: "entities",
+    link: "/services/web/codbex-athena/gen/ui/JournalEntry/JournalEntries/dialog-window/index.html",
+    perspectiveName: "JournalEntry",
 };
 
 if (typeof exports !== 'undefined') {
-    exports.getView = function () {
+    exports.getDialogWindow = function () {
         return viewData;
     }
 }

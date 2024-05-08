@@ -5,13 +5,13 @@
  */
 exports.getTile = function () {
     return {
-        group: "Entities",
+        group: "JournalEntry",
         name: "JournalEntries",
         caption: "Manage entity JournalEntries",
         tooltip: "JournalEntries",
         // icon: "file-o",
-        location: "/services/web/codbex-athena/gen/ui/entities/index.html",
+        location: "/services/web/codbex-athena/gen/ui/JournalEntry/index.html",
         order: "100",
-        groupOrder: "100",
+        groupOrder: "110",
     };
 };

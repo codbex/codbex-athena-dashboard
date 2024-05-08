@@ -211,7 +211,7 @@ export class JournalEntriesRepository {
     }
 
     private async triggerEvent(data: JournalEntriesEntityEvent) {
-        const triggerExtensions = await extensions.loadExtensionModules("codbex-athena-entities-JournalEntries", ["trigger"]);
+        const triggerExtensions = await extensions.loadExtensionModules("codbex-athena-JournalEntry-JournalEntries", ["trigger"]);
         triggerExtensions.forEach(triggerExtension => {
             try {
                 triggerExtension.trigger(data);
@@ -219,6 +219,6 @@ export class JournalEntriesRepository {
                 console.error(error);
             }            
         });
-        producer.topic("codbex-athena-entities-JournalEntries").send(JSON.stringify(data));
+        producer.topic("codbex-athena-JournalEntry-JournalEntries").send(JSON.stringify(data));
     }
 }

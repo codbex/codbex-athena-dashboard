@@ -15,6 +15,7 @@
                     },
                     {
                         "type": "DATE",
+                        "length": 20,
                         "precision": "NaN",
                         "scale": "NaN",
                         "name": "JOURNALENTRIES_DATE"

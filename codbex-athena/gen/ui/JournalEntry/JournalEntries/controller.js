@@ -1,9 +1,9 @@
 angular.module('page', ["ideUI", "ideView", "entityApi"])
 	.config(["messageHubProvider", function (messageHubProvider) {
-		messageHubProvider.eventIdPrefix = 'codbex-athena.entities.JournalEntries';
+		messageHubProvider.eventIdPrefix = 'codbex-athena.JournalEntry.JournalEntries';
 	}])
 	.config(["entityApiProvider", function (entityApiProvider) {
-		entityApiProvider.baseUrl = "/services/ts/codbex-athena/gen/api/entities/JournalEntriesService.ts";
+		entityApiProvider.baseUrl = "/services/ts/codbex-athena/gen/api/JournalEntry/JournalEntriesService.ts";
 	}])
 	.controller('PageController', ['$scope', 'messageHub', 'entityApi', 'Extensions', function ($scope, messageHub, entityApi, Extensions) {
 
@@ -13,8 +13,8 @@ angular.module('page', ["ideUI", "ideView", "entityApi"])
 
 		//-----------------Custom Actions-------------------//
 		Extensions.get('dialogWindow', 'codbex-athena-custom-action').then(function (response) {
-			$scope.pageActions = response.filter(e => e.perspective === "entities" && e.view === "JournalEntries" && (e.type === "page" || e.type === undefined));
-			$scope.entityActions = response.filter(e => e.perspective === "entities" && e.view === "JournalEntries" && e.type === "entity");
+			$scope.pageActions = response.filter(e => e.perspective === "JournalEntry" && e.view === "JournalEntries" && (e.type === "page" || e.type === undefined));
+			$scope.entityActions = response.filter(e => e.perspective === "JournalEntry" && e.view === "JournalEntries" && e.type === "entity");
 		});
 
 		$scope.triggerPageAction = function (action) {
