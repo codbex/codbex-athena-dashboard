@@ -1,13 +1,6 @@
 {
     "guid": "codbex-athena",
-    "dependencies": [
-        {
-            "guid": "codbex-account",
-            "type": "git",
-            "url": "https://github.com/codbex/codbex-accounts.git",
-            "branch": "main"
-        }
-    ],
+    "dependencies": [],
     "actions": [
         {
             "name": "Build TypeScript",
