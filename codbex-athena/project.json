@@ -5,7 +5,7 @@
             "guid": "codbex-account",
             "type": "git",
             "url": "https://github.com/codbex/codbex-accounts.git",
-            "branch": "main"
+            "branch": "bug/git-error"
         }
     ],
     "actions": [
