@@ -1,5 +1,5 @@
 {
-    "guid": "codbex-athena-ui",
+    "guid": "codbex-athena",
     "dependencies": [
         {
             "guid": "codbex-account",
