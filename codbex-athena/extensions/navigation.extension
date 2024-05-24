@@ -1,0 +1,5 @@
+{
+    "module": "codbex-athena/services/navigation.js",
+    "extensionPoint": "portal",
+    "description": "Athena Launchpad"
+}

@@ -1,0 +1,5 @@
+{
+    "module": "codbex-athena/services/employees.js",
+    "extensionPoint": "ide-subview",
+    "description": "Employees Subview"
+}
