@@ -89,11 +89,11 @@ dashboard.controller('DashboardController', ['$scope', '$document', '$http', 'me
         }
     }
 
-    // function calculateGrossProfit() {
-    //     if ($scope.InvoiceData && $scope.OrderData) {
-    //         $scope.GrossProfit = (($scope.InvoiceData.SalesInvoiceTotal + $scope.OrderData.SalesOrderTotal) - ($scope.InvoiceData.PurchaseInvoiceTotal + $scope.OrderData.PurchaseOrderTotal)).toFixed(2);
-    //     }
-    // }
+    function calculateGrossProfit() {
+        if ($scope.InvoiceData && $scope.OrderData) {
+            $scope.GrossProfit = (($scope.InvoiceData.SalesInvoiceTotal + $scope.OrderData.SalesOrderTotal) - ($scope.InvoiceData.PurchaseInvoiceTotal + $scope.OrderData.PurchaseOrderTotal)).toFixed(2);
+        }
+    }
 
     // async function getOrderData() {
     //     try {

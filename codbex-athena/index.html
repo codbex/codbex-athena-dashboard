@@ -233,6 +233,12 @@
                                 is-expanded="configurationsExpanded">
                             </fd-list-navigation-item-arrow>
                             <fd-list>
+                                <fd-list-navigation-item ng-click="switchView('accounts', $event)">
+                                    <span fd-list-navigation-item-text>Accounts</span>
+                                </fd-list-navigation-item>
+                                <fd-list-navigation-item ng-click="switchView('journal-entries', $event)">
+                                    <span fd-list-navigation-item-text>Journal Entries</span>
+                                </fd-list-navigation-item>
                                 <fd-list-navigation-item ng-click="switchView('countries', $event)">
                                     <span fd-list-navigation-item-text>Countries</span>
                                 </fd-list-navigation-item>
@@ -277,6 +283,12 @@
             <embedded-view class="dg-fill-parent" view-id="codbex-athena-countries" dg-type="subview"
                 ng-show="currentViewId === 'countries'">
             </embedded-view>
+            <embedded-view class="dg-fill-parent" view-id="codbex-athena-accounts" dg-type="subview"
+                ng-show="currentViewId === 'accounts'">
+            </embedded-view>
+            <embedded-view class="dg-fill-parent" view-id="codbex-athena-journal-entries" dg-type="subview"
+                ng-show="currentViewId === 'journal-entries'">
+            </embedded-view>
             <embedded-view class="dg-fill-parent" view-id="codbex-athena-cities" dg-type="subview"
                 ng-show="currentViewId === 'cities'">
             </embedded-view>
@@ -304,11 +316,11 @@
             <!-- <embedded-view class="dg-fill-parent" view-id="codbex-athena-purchase-orders" dg-type="subview"
                 ng-show="currentViewId === 'purchase-orders'">
             </embedded-view>
+            <embedded-view class="dg-fill-parent" view-id="codbex-athena-sales-orders" dg-type="subview"
+                ng-show="currentViewId === 'sales-orders'">
+            </embedded-view> -->
             <embedded-view class="dg-fill-parent" view-id="codbex-athena-purchase-invoices" dg-type="subview"
                 ng-show="currentViewId === 'purchase-invoices'">
-            </embedded-view>
-            <embedded-view class="dg-fill-parent" view-id="codbex-athena-sales-orders" dg-type="subview"
-                ng-show="currentViewId === 'sales-orders'"> -->
             </embedded-view>
             <embedded-view class="dg-fill-parent" view-id="codbex-athena-sales-invoices" dg-type="subview"
                 ng-show="currentViewId === 'sales-invoices'">

@@ -1,0 +1,5 @@
+{
+    "module": "codbex-athena/services/accounts.js",
+    "extensionPoint": "ide-subview",
+    "description": "Accounts Subview"
+}
