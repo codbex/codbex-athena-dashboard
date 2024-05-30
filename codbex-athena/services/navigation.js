@@ -1,6 +1,6 @@
 const perspectiveData = {
     id: "codbex-athena-launchpad",
-    name: "Hestia",
+    name: "Athena",
     link: "../codbex-athena/index.html",
     order: "0",
     icon: "../codbex-athena/images/navigation.svg",
