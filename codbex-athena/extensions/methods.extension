@@ -1,0 +1,5 @@
+{
+    "extensionPoint": "ide-subview",
+    "module": "codbex-athena/services/methods.js",
+    "description": "Methods Subview"
+}

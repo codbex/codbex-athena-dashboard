@@ -1,0 +1,5 @@
+{
+    "module": "codbex-athena/services/customer-payments.js",
+    "extensionPoint": "ide-subview",
+    "description": "Customer Payments Subview"
+}
