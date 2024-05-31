@@ -38,11 +38,6 @@
                             <span fd-list-navigation-item-text>Purchasing</span>
                             <fd-list-navigation-item-arrow aria-label="expand submenu" is-expanded="purchasingExpanded">
                             </fd-list-navigation-item-arrow>
-                            <!-- <fd-list>
-                                <fd-list-navigation-item ng-click="switchView('purchase-orders', $event)">
-                                    <span fd-list-navigation-item-text>Purchase Orders</span>
-                                </fd-list-navigation-item>
-                            </fd-list> -->
                             <fd-list>
                                 <fd-list-navigation-item ng-click="switchView('purchase-invoices', $event)">
                                     <span fd-list-navigation-item-text>Purchase Invoices</span>
@@ -61,11 +56,6 @@
                             <span fd-list-navigation-item-text>Sales</span>
                             <fd-list-navigation-item-arrow aria-label="expand submenu" is-expanded="salesExpanded">
                             </fd-list-navigation-item-arrow>
-                            <!-- <fd-list>
-                                <fd-list-navigation-item ng-click="switchView('sales-orders', $event)">
-                                    <span fd-list-navigation-item-text>Sales Orders</span>
-                                </fd-list-navigation-item>
-                            </fd-list> -->
                             <fd-list>
                                 <fd-list-navigation-item ng-click="switchView('sales-invoices', $event)">
                                     <span fd-list-navigation-item-text>Sales Invoices</span>
@@ -77,90 +67,6 @@
                                 </fd-list-navigation-item>
                             </fd-list>
                         </fd-list-navigation-item>
-                        <!-- <fd-list-navigation-item ng-init="inventoryExpanded = false" expandable="true"
-                            ng-click="inventoryExpanded = !inventoryExpanded" is-expanded="inventoryExpanded">
-                            <fd-list-navigation-item-icon glyph="sap-icon--folder">
-                            </fd-list-navigation-item-icon>
-                            <span fd-list-navigation-item-text>Inventory</span>
-                            <fd-list-navigation-item-arrow aria-label="expand submenu" is-expanded="inventoryExpanded">
-                            </fd-list-navigation-item-arrow> -->
-                        <!-- <fd-list>
-                                <fd-list-navigation-item ng-click="switchView('goods-receipts', $event)">
-                                    <span fd-list-navigation-item-text>Goods Receipts</span>
-                                </fd-list-navigation-item>
-                            </fd-list> -->
-                        <!-- <fd-list>
-                                <fd-list-navigation-item ng-click="switchView('goods-issues', $event)">
-                                    <span fd-list-navigation-item-text>Goods Issues</span>
-                                </fd-list-navigation-item>
-                            </fd-list> -->
-                        <!-- <fd-list>
-                                <fd-list-navigation-item ng-click="switchView('stock-adjustments', $event)">
-                                    <span fd-list-navigation-item-text>Stock Adjustments</span>
-                                </fd-list-navigation-item>
-                            </fd-list> 
-                        </fd-list-navigation-item> -->
-                        <!-- <fd-list-navigation-group-header>Reports</fd-list-navigation-group-header> 
-                            <fd-list-navigation-item ng-init="financeReportsExpanded = false" expandable="true"
-                            ng-click="financeReportsExpanded = !financeReportsExpanded"
-                            is-expanded="financeReportsExpanded">
-                            <fd-list-navigation-item-icon glyph="sap-icon--folder">
-                            </fd-list-navigation-item-icon>
-                            <span fd-list-navigation-item-text>Finance</span>
-                            <fd-list-navigation-item-arrow aria-label="expand submenu"
-                                is-expanded="financeReportsExpanded">
-                            </fd-list-navigation-item-arrow>
-                            <!-- <fd-list>
-                                <fd-list-navigation-item ng-click="switchView('sales-orders-report', $event)">
-                                    <span fd-list-navigation-item-text>Sales Orders</span>
-                                </fd-list-navigation-item>
-                            </fd-list>
-                            <fd-list>
-                                <fd-list-navigation-item ng-click="switchView('sales-orders-total-report', $event)">
-                                    <span fd-list-navigation-item-text>Sales Orders Total</span>
-                                </fd-list-navigation-item>
-                            </fd-list>
-                            <fd-list>
-                                <fd-list-navigation-item ng-click="switchView('purchase-orders-report', $event)">
-                                    <span fd-list-navigation-item-text>Purchase Orders</span>
-                                </fd-list-navigation-item>
-                            </fd-list>
-                            <fd-list>
-                                <fd-list-navigation-item ng-click="switchView('purchase-orders-total-report', $event)">
-                                    <span fd-list-navigation-item-text>Purchase Orders Total</span>
-                                </fd-list-navigation-item>
-                            </fd-list> -->
-                        <!-- <fd-list>
-								<fd-list-navigation-item ng-click="switchView('accounts-payable', $event)">
-									<span fd-list-navigation-item-text>Accounts Payable</span>
-								</fd-list-navigation-item>
-							</fd-list>
-							<fd-list>
-								<fd-list-navigation-item ng-click="switchView('accounts-receivable', $event)">
-									<span fd-list-navigation-item-text>Accounts Receivable</span>
-								</fd-list-navigation-item>
-							</fd-list>
-							<fd-list>
-								<fd-list-navigation-item ng-click="switchView('balance-sheet', $event)">
-									<span fd-list-navigation-item-text>Balance Sheet</span>
-								</fd-list-navigation-item>
-							</fd-list> 
-                        </fd-list-navigation-item> -->
-                        <!-- <fd-list-navigation-item ng-init="inventoryReportsExpanded = false" expandable="true"
-							ng-click="inventoryReportsExpanded = !inventoryReportsExpanded"
-							is-expanded="inventoryReportsExpanded">
-							<fd-list-navigation-item-icon glyph="sap-icon--folder">
-							</fd-list-navigation-item-icon>
-							<span fd-list-navigation-item-text>Inventory</span>
-							<fd-list-navigation-item-arrow aria-label="expand submenu"
-								is-expanded="inventoryReportsExpanded">
-							</fd-list-navigation-item-arrow>
-							<fd-list>
-								<fd-list-navigation-item ng-click="switchView('sku-listing', $event)">
-									<span fd-list-navigation-item-text>SKU Listing</span>
-								</fd-list-navigation-item>
-							</fd-list>
-						</fd-list-navigation-item> -->
                         <fd-list-navigation-group-header>Products</fd-list-navigation-group-header>
                         <fd-list-navigation-item ng-init="productExpanded = false" expandable="true"
                             ng-click="productExpanded = !productExpanded" is-expanded="productExpanded">
@@ -248,9 +154,6 @@
                                 <fd-list-navigation-item ng-click="switchView('companies', $event)">
                                     <span fd-list-navigation-item-text>Companies</span>
                                 </fd-list-navigation-item>
-                                <!-- <fd-list-navigation-item ng-click="switchView('stores', $event)">
-                                    <span fd-list-navigation-item-text>Stores</span>
-                                </fd-list-navigation-item> -->
                                 <fd-list-navigation-item ng-click="switchView('currencies', $event)">
                                     <span fd-list-navigation-item-text>Currencies</span>
                                 </fd-list-navigation-item>
@@ -295,9 +198,6 @@
             <embedded-view class="dg-fill-parent" view-id="codbex-athena-companies" dg-type="subview"
                 ng-show="currentViewId === 'companies'">
             </embedded-view>
-            <!-- <embedded-view class="dg-fill-parent" view-id="codbex-athena-stores" dg-type="subview"
-                ng-show="currentViewId === 'stores'">
-            </embedded-view> -->
             <embedded-view class="dg-fill-parent" view-id="codbex-athena-currencies" dg-type="subview"
                 ng-show="currentViewId === 'currencies'">
             </embedded-view>
@@ -313,27 +213,12 @@
             <embedded-view class="dg-fill-parent" view-id="codbex-athena-employees" dg-type="subview"
                 ng-show="currentViewId === 'employees'">
             </embedded-view>
-            <!-- <embedded-view class="dg-fill-parent" view-id="codbex-athena-purchase-orders" dg-type="subview"
-                ng-show="currentViewId === 'purchase-orders'">
-            </embedded-view>
-            <embedded-view class="dg-fill-parent" view-id="codbex-athena-sales-orders" dg-type="subview"
-                ng-show="currentViewId === 'sales-orders'">
-            </embedded-view> -->
             <embedded-view class="dg-fill-parent" view-id="codbex-athena-purchase-invoices" dg-type="subview"
                 ng-show="currentViewId === 'purchase-invoices'">
             </embedded-view>
             <embedded-view class="dg-fill-parent" view-id="codbex-athena-sales-invoices" dg-type="subview"
                 ng-show="currentViewId === 'sales-invoices'">
             </embedded-view>
-            <!-- <embedded-view class="dg-fill-parent" view-id="codbex-athena-goods-receipts" dg-type="subview"
-                ng-show="currentViewId === 'goods-receipts'">
-            </embedded-view> -->
-            <!-- <embedded-view class="dg-fill-parent" view-id="codbex-athena-goods-issues" dg-type="subview"
-                ng-show="currentViewId === 'goods-issues'">
-            </embedded-view> -->
-            <!-- <embedded-view class="dg-fill-parent" view-id="codbex-athena-stock-adjustments" dg-type="subview"
-                ng-show="currentViewId === 'stock-adjustments'">
-            </embedded-view> -->
             <embedded-view class="dg-fill-parent" view-id="codbex-athena-methods" dg-type="subview"
                 ng-show="currentViewId === 'methods'">
             </embedded-view>
@@ -349,19 +234,6 @@
             <embedded-view class="dg-fill-parent" view-id="codbex-athena-supplier-payments" dg-type="subview"
                 ng-show="currentViewId === 'supplier-payments'">
             </embedded-view>
-            <!-- Reports -->
-            <!-- <embedded-view class="dg-fill-parent" view-id="codbex-athena-sales-orders-report" dg-type="subview"
-                ng-show="currentViewId === 'sales-orders-report'">
-            </embedded-view>
-            <embedded-view class="dg-fill-parent" view-id="codbex-athena-sales-orders-total-report" dg-type="subview"
-                ng-show="currentViewId === 'sales-orders-total-report'">
-            </embedded-view>
-            <embedded-view class="dg-fill-parent" view-id="codbex-athena-purchase-orders-report" dg-type="subview"
-                ng-show="currentViewId === 'purchase-orders-report'">
-            </embedded-view>
-            <embedded-view class="dg-fill-parent" view-id="codbex-athena-purchase-orders-total-report" dg-type="subview"
-                ng-show="currentViewId === 'purchase-orders-total-report'">
-            </embedded-view> -->
         </div>
 
         <ide-dialogs extension-points="::extraExtensionPoints"></ide-dialogs>
