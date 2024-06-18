@@ -18,6 +18,9 @@ jobs:
       with:
         version: 'latest'
 
+    - name: Create .kube directory
+      run: mkdir -p $HOME/.kube
+
     - name: Authenticate with Kubernetes
       env:
         KUBECONFIG: ${{ secrets.KUBECONFIG }}
