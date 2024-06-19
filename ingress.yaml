@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: codbex-athena
+spec:
+  rules:
+    - host: athena.eu1.codbex.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: codbex-athena
+                port:
+                  number: 80

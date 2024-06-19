@@ -1,4 +1,4 @@
-# Docker descriptor for codbex-petstore
+# Docker descriptor for codbex-athena
 # License - http://www.eclipse.org/legal/epl-v20.html
 
 FROM ghcr.io/codbex/codbex-atlas:0.36.0
