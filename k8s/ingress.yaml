@@ -6,6 +6,7 @@ metadata:
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt
 spec:
+  ingressClassName: nginx
   rules:
     - host: dev.athena.eu1.codbex.com
       http:
@@ -17,3 +18,7 @@ spec:
                 name: codbex-athena
                 port:
                   number: 80
+  tls:
+    - hosts:
+        - ${{ secrets.CLUSTER_URL }}
+      secretName: codbex-athena-tls-secret

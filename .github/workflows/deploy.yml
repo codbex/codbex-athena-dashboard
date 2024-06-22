@@ -26,8 +26,11 @@ jobs:
         KUBECONFIG: ${{ secrets.KUBECONFIG }}
       run: echo "${{ secrets.KUBECONFIG }}" > $HOME/.kube/config
 
+    - name: Apply ClusterIssuer for Let's Encrypt
+      run: kubectl apply -f k8s/cluster-issuer.yaml
+
     - name: Deploy to Kubernetes
       run: |
-        kubectl apply -f deployment.yaml
-        kubectl apply -f service.yaml
-        kubectl apply -f ingress.yaml
+        kubectl apply -f k8s/deployment.yaml
+        kubectl apply -f k8s/service.yaml
+        kubectl apply -f k8s/ingress.yaml
