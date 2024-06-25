@@ -20,5 +20,5 @@ spec:
                   number: 80
   tls:
     - hosts:
-        - ${{ secrets.CLUSTER_URL }}
+        - dev.athena.eu1.codbex.com
       secretName: codbex-athena-tls-secret
