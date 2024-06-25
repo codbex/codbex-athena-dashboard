@@ -7,8 +7,8 @@ metadata:
     app: codbex-athena
 spec:
   ports:
-    - port: 80
-      targetPort: 80
+    - name: http
+      port: 80
   selector:
     app: codbex-athena
   type: ClusterIP
