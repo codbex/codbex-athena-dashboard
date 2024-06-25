@@ -25,4 +25,5 @@ spec:
               memory: "4Gi"
               cpu: "2"
           ports:
-            - containerPort: 80
+            - name: http
+              containerPort: 80
