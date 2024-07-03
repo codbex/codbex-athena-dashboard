@@ -2,9 +2,10 @@
     "guid": "codbex-athena",
     "dependencies": [
         {
-            "guid": "codbex-athena-widgets",
+            "guid": "codbex-athena-tiles",
             "type": "git",
-            "url": "https://github.com/Mrgoblings/codbex-athena-widgets.git",
+            "url": "https://github.com/Mrgoblings/codbex-athena-tiles.git",
+
             "branch": "main"
         },
         {
