@@ -15,7 +15,9 @@
             href="/services/js/resources-core/services/loader.js?id=application-view-css" />
         </script>
         <script type="text/javascript" src="dashboard.js"></script>
-        <script type="text/javascript" src="/webjars/chart.js/4.4.2/dist/chart.umd.js"></script>
+        <script type="text/javascript" src="/webjars/chart.js/dist/chart.umd.js"></script>
+        <script type="text/javascript" src="../../codbex-athena-tiles/tiles.js"></script>
+
         <style>
             .tile-auto-layout {
                 min-height: auto;
@@ -31,10 +33,17 @@
         <fd-busy-indicator-extended class="dg-fill-parent" ng-hide="state.error || !state.isBusy" dg-size="l">
             {{state.busyText}}
         </fd-busy-indicator-extended>
-
         <div class="fd-container" ng-show="!state.error && !state.isBusy">
             <h2 fd-title header-size="2" class="fd-margin-top--sm fd-margin-bottom--tiny">Welcome to Athena Dashboard
             </h2>
+            <fd-panel expanded="true" class="fd-col fd-col--12">
+            </fd-panel>
+            <at-numeric-tile title="Pesho" numericData="3" perspective="">
+            </at-numeric-tile>
+        </div>
+
+        <!-- <div class="fd-container" ng-show="!state.error && !state.isBusy">
+            
 
             <fd-panel expanded="true" class="fd-col fd-col--12">
                 <fd-panel expanded="true" class="fd-col fd-col--12">
@@ -71,7 +80,6 @@
                                                         </fd-list>
                                                     </td>
                                                     <td fd-table-cell width="50%">
-                                                        <!-- Right section for doughnut chart -->
                                                         <canvas id="doughnutChart" width="200" height="200"></canvas>
                                                     </td>
                                                 </tr>
@@ -108,7 +116,8 @@
                     <fd-message-page-title>Dashboard encounterd an error!</fd-message-page-title>
                     <fd-message-page-subtitle>{{errorMessage}}</fd-message-page-subtitle>
                 </fd-message-page>
-        </div>
+            </fd-panel>
+        </div> -->
     </body>
 
 </html>
