@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: codbex-athena
+  namespace: dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: codbex-athena
+  template:
+    metadata:
+      labels:
+        app: codbex-athena
+    spec:
+      containers:
+        - name: codbex-athena
+          image: ghcr.io/codbex/codbex-athena:latest
+          imagePullPolicy: Always
+          resources:
+            requests:
+              memory: "1Gi"
+              cpu: "0.5"
+            limits:
+              memory: "4Gi"
+              cpu: "2"
+          ports:
+            - name: http
+              containerPort: 80
