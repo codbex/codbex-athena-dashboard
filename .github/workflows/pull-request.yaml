@@ -1,0 +1,13 @@
+name: Pull Request - Application
+
+on:
+  pull_request:
+    branches: 
+      - main
+
+jobs:
+  modules:
+    uses: codbex/codbex-infra/.github/workflows/module-pull-request.yaml@main
+    with:
+      packages-build: codbex-athena
+    secrets: inherit

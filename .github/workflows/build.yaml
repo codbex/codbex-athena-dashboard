@@ -1,0 +1,13 @@
+name: Build - Application
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  modules:
+    uses: codbex/codbex-infra/.github/workflows/module-build.yaml@main
+    with:
+      packages-build: codbex-athena
+    secrets: inherit
