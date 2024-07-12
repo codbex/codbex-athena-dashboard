@@ -52,6 +52,13 @@
                             footer-text="BGN" is-floating-number="true" tail="%">
                         </at-numeric-tile>
 
+                        <at-chart-tile title="Sales Distribution"
+                            data="{ 'Category': 'Electronics', 'Total Sales': 250 }"
+                            datasets="[ { data: [300, 50, 100], backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'] } ]"
+                            labels="['Red', 'Blue', 'Yellow']">
+                        </at-chart-tile>
+
+
                     </fd-panel-content>
                 </fd-panel>
                 <fd-message-page glyph="sap-icon--error" ng-if="state.error">
