@@ -1,2 +1,2 @@
 # codbex-athena
-Accounting Management
+Accounting Management Dashboard
