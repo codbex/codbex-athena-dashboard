@@ -1,0 +1,5 @@
+{
+    "module": "codbex-athena/services/organizations.js",
+    "extensionPoint": "ide-subview",
+    "description": "Organizations Subview"
+}
