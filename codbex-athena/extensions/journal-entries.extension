@@ -1,5 +1,0 @@
-{
-    "module": "codbex-athena/services/journal-entries.js",
-    "extensionPoint": "ide-subview",
-    "description": "Journal Entries Subview"
-}

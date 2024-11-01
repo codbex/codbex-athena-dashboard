@@ -1,5 +1,0 @@
-{
-    "module": "codbex-athena/services/currencies.js",
-    "extensionPoint": "ide-subview",
-    "description": "Currencies Subview"
-}

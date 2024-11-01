@@ -1,5 +1,0 @@
-{
-    "module": "codbex-athena/services/suppliers.js",
-    "extensionPoint": "ide-subview",
-    "description": "Suppliers Subview"
-}
