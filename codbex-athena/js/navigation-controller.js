@@ -13,7 +13,7 @@ navigation.controller("LaunchpadViewController", ["$scope", "messageHub", "$http
     $scope.isGroupVisible = function (group) {
         const items = $scope.groupItems[group.label.toLowerCase()];
         return items.some(function (item) {
-            return $scope.currentViewId === item.view;
+            return $scope.currentViewId === item.id;
         });
     };
 
