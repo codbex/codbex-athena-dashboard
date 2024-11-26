@@ -11,7 +11,7 @@ dashboard.controller('DashboardController', ['$scope', '$http', 'messageHub', fu
         busyText: "Loading...",
     };
 
-    $http.get("/services/ts/codbex-athena/api/WidgetsExtension/WidgetService.ts")
+    $http.get("/services/ts/codbex-athena/api/WidgetsExtension/WidgetService.ts")   //new fixed to use ts
         .then(function (response) {
             $scope.widgetList = response.data;
 
@@ -32,12 +32,16 @@ dashboard.controller('DashboardController', ['$scope', '$http', 'messageHub', fu
 
         const widgetContainer = document.createElement('div');
 
-        widgetContainer.onclick = () => {
+        // Bind the click event to the div
+        widgetContainer.addEventListener('click', () => {    //new
             if (widgetData.redirectViewId) {
-                console.log("swithcing to view :" + widgetData.redirectViewId)
-                messageHub.postMessage('launchpad.switch.perspective', { viewId: widgetData.redirectViewId }, true);
+                messageHub.postMessage(
+                    'launchpad.switch.perspective',
+                    { viewId: widgetData.redirectViewId },
+                    true
+                );
             }
-        }
+        });
 
         if (widgetData.size == "small") {
             widgetContainer.className = 'fd-col fd-col--6 fd-col-md--3 fd-col-lg--3 fd-col-xl--3';
@@ -48,6 +52,10 @@ dashboard.controller('DashboardController', ['$scope', '$http', 'messageHub', fu
         }
 
         const iframe = document.createElement('iframe');
+
+        if (widgetData.redirectViewId)   //new
+            iframe.style.pointerEvents = "none";    //new
+
         iframe.src = widgetData.link;
         iframe.title = widgetData.label;
         iframe.className = 'tile-auto-layout';
@@ -59,9 +67,6 @@ dashboard.controller('DashboardController', ['$scope', '$http', 'messageHub', fu
         // @ts-ignore
         iframe.loading = "lazy";
 
-        // iframe.setAttribute('scrolling', 'no');
-        // iframe.loading = widgetData.lazyLoad ? 'lazy' : 'eager'; 
-
         widgetContainer.appendChild(iframe);
 
         const widgetRow = document.querySelector('.fd-row');
@@ -72,13 +77,4 @@ dashboard.controller('DashboardController', ['$scope', '$http', 'messageHub', fu
             console.error('Widget container not found');
         }
     }
-
-
-
-    messageHub.onDidReceiveMessage(
-        "contextmenu",
-        function (msg) {
-            messageHub.postMessage('launchpad.switch.perspective', { viewId: msg.data }, true);
-        }
-    );
 }]);
