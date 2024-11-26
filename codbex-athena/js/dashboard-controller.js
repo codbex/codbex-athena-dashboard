@@ -25,41 +25,50 @@ dashboard.controller('DashboardController', ['$scope', '$http', 'messageHub', fu
         });
 
     function createWidget(widgetData) {
-        if (!widgetData || !widgetData.id || !widgetData.link) {
+        if (!widgetData || !widgetData.id || !widgetData.link || !widgetData.size
+            || !["small", "medium", "large"].includes(widgetData.size)) {
             console.error('Invalid widget data:', widgetData);
             return;
-        }
-
-        const widgetContainer = document.createElement('div');
-        if (widgetData.size == "small") {
-            widgetContainer.className = 'fd-col fd-col--6 fd-col-md--3 fd-col-lg--3 fd-col-xl--3';
-        } else if (widgetData.size == "medium") {
-            widgetContainer.className = 'fd-col fd-col--12 fd-col-md--6 fd-col-lg--6 fd-col-xl--6';
-        } else { // large - TODO: needs to be made higher.
-            widgetContainer.className = 'fd-col fd-col--12 fd-col-md--6 fd-col-lg--6 fd-col-xl--6';
         }
 
         const iframe = document.createElement('iframe');
         iframe.src = widgetData.link;
         iframe.title = widgetData.label;
         iframe.className = 'tile-auto-layout';
-        iframe.style.width = '100%';
-        iframe.style.height = '100%';
         iframe.style.border = 'none';
         iframe.style.overflow = 'hidden';
         iframe.style.display = 'block';
+
         // @ts-ignore
         iframe.loading = "lazy";
 
-        // iframe.setAttribute('scrolling', 'no');
-        // iframe.loading = widgetData.lazyLoad ? 'lazy' : 'eager'; 
+        const widgetContainer = document.createElement('div');
+        if (widgetData.size == "small") {
+            widgetContainer.className = 'fd-col fd-col--6 fd-col-md--3 fd-col-lg--3 fd-col-xl--3';
+            iframe.style.width = '200px';
+            iframe.style.height = '120px';
+        } else if (widgetData.size == "medium") {
+            widgetContainer.className = 'fd-col fd-col--12 fd-col-md--6 fd-col-lg--6 fd-col-xl--6';
+            iframe.style.width = '430px';
+            iframe.style.height = '200px';
+        } else { // large - TODO: needs to be made higher.
+            widgetContainer.className = 'fd-col fd-col--12 fd-col-md--6 fd-col-lg--6 fd-col-xl--6';
+            iframe.style.width = '430px';
+            iframe.style.height = '320px';
+        }
+
+
+
+
+
+
+
 
         widgetContainer.appendChild(iframe);
 
-        const widgetRow = document.querySelector('.fd-row');
-
-        if (widgetRow) {
-            widgetRow.appendChild(widgetContainer);
+        const widgetPanel = document.getElementById(`${widgetData.size}-widget-container`);;
+        if (widgetPanel) {
+            widgetPanel.appendChild(widgetContainer);
         } else {
             console.error('Widget container not found');
         }
