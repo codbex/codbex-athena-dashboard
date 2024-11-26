@@ -11,7 +11,7 @@ dashboard.controller('DashboardController', ['$scope', '$http', 'messageHub', fu
         busyText: "Loading...",
     };
 
-    $http.get("/services/js/codbex-athena/api/WidgetsExtension/WidgetService.js")
+    $http.get("/services/ts/codbex-athena/api/WidgetsExtension/WidgetService.ts")
         .then(function (response) {
             $scope.widgetList = response.data;
 
@@ -31,6 +31,14 @@ dashboard.controller('DashboardController', ['$scope', '$http', 'messageHub', fu
         }
 
         const widgetContainer = document.createElement('div');
+
+        widgetContainer.onclick = () => {
+            if (widgetData.redirectViewId) {
+                console.log("swithcing to view :" + widgetData.redirectViewId)
+                messageHub.postMessage('launchpad.switch.perspective', { viewId: widgetData.redirectViewId }, true);
+            }
+        }
+
         if (widgetData.size == "small") {
             widgetContainer.className = 'fd-col fd-col--6 fd-col-md--3 fd-col-lg--3 fd-col-xl--3';
         } else if (widgetData.size == "medium") {
@@ -70,13 +78,7 @@ dashboard.controller('DashboardController', ['$scope', '$http', 'messageHub', fu
     messageHub.onDidReceiveMessage(
         "contextmenu",
         function (msg) {
-            if (msg.data === 'sales-orders') {
-                messageHub.postMessage('launchpad.switch.perspective', { perspectiveId: 'sales-orders' }, true);
-            } else if (msg.data === 'products') {
-                messageHub.postMessage('launchpad.switch.perspective', { perspectiveId: 'products' }, true);
-            } else if (msg.data === 'sales-invoices') {
-                messageHub.postMessage('launchpad.switch.perspective', { perspectiveId: 'sales-invoices' }, true);
-            }
+            messageHub.postMessage('launchpad.switch.perspective', { viewId: msg.data }, true);
         }
     );
 }]);

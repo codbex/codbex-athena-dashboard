@@ -1,5 +1,5 @@
 const viewData = {
-    id: "codbex-athena-dashboard",
+    id: "dashboard",
     label: "Dashboard",
     lazyLoad: true,
     link: "/services/web/codbex-athena/subviews/dashboard.html"

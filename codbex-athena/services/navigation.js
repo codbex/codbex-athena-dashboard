@@ -1,9 +1,9 @@
 const perspectiveData = {
-    id: "codbex-athena-launchpad",
+    id: "launchpad",
     name: "Athena",
-    link: "../codbex-athena/index.html",
-    order: "0",
-    icon: "../codbex-athena/images/navigation.svg",
+    link: "../index.html",
+    order: 0,
+    icon: "../images/navigation.svg",
 };
 
 if (typeof exports !== 'undefined') {

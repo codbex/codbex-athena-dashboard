@@ -39,7 +39,7 @@
 								<fd-list-navigation-item-arrow aria-label="expand submenu" is-expanded="group.expanded">
 								</fd-list-navigation-item-arrow>
 								<fd-list ng-repeat="item in groupItems[group.label.toLowerCase()]">
-									<fd-list-navigation-item ng-click="switchView(item.view, $event)">
+									<fd-list-navigation-item ng-click="switchView(item.id, $event)">
 										<span fd-list-navigation-item-text>{{item.label}}</span>
 									</fd-list-navigation-item>
 								</fd-list>
@@ -50,16 +50,16 @@
 				</fd-vertical-nav-main-section>
 			</fd-vertical-nav>
 
-			<embedded-view class="dg-fill-parent" view-id="codbex-athena-dashboard" dg-type="normal"
+			<embedded-view class="dg-fill-parent" view-id="dashboard" dg-type="normal"
 				ng-show="currentViewId === 'dashboard'">
 			</embedded-view>
 
 			<div ng-show="currentViewId !== 'dashboard'" class="dg-fill-parent">
 				<div class="dg-fill-parent" ng-repeat="group in groups" ng-show="isGroupVisible(group)">
 					<div class="dg-fill-parent" ng-repeat="item in groupItems[group.label.toLowerCase()]"
-						ng-show="currentViewId === '{{item.view}}'">
+						ng-show="currentViewId === '{{item.id}}'">
 						<iframe class="dg-fill-parent" ng-src="{{item.link}}" dg-type="normal"
-							ng-show="currentViewId === '{{item.view}}'" loading="lazy">
+							ng-show="currentViewId === '{{item.id}}'" loading="lazy">
 						</iframe>
 					</div>
 				</div>
