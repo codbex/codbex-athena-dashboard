@@ -1,8 +1,8 @@
 const viewData = {
-    id: "codbex-athena-dashboard",
+    id: "portal-dashboard",
     label: "Dashboard",
     lazyLoad: true,
-    link: "/services/web/codbex-athena/subviews/dashboard.html"
+    link: "/services/web/portal/dashboard.html"
 };
 if (typeof exports !== 'undefined') {
     exports.getView = function () {
