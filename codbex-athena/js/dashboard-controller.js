@@ -45,25 +45,19 @@ dashboard.controller('DashboardController', ['$scope', '$http', 'messageHub', fu
         const widgetContainer = document.createElement('div');
         if (widgetData.size == "small") {
             widgetContainer.className = 'fd-col fd-col--6 fd-col-md--3 fd-col-lg--3 fd-col-xl--3';
-            iframe.style.width = '200px';
+            iframe.style.width = '100%';
             iframe.style.height = '120px';
         } else if (widgetData.size == "medium") {
             widgetContainer.className = 'fd-col fd-col--12 fd-col-md--6 fd-col-lg--6 fd-col-xl--6';
-            iframe.style.width = '430px';
+            iframe.style.width = '100%';
             iframe.style.height = '200px';
         } else { // large - TODO: needs to be made higher.
             widgetContainer.className = 'fd-col fd-col--12 fd-col-md--6 fd-col-lg--6 fd-col-xl--6';
-            iframe.style.width = '430px';
+            iframe.style.width = '100%';
             iframe.style.height = '320px';
         }
 
-
-
-
-
-
-
-
+        widgetContainer.style.margin = '0.5rem 0'
         widgetContainer.appendChild(iframe);
 
         const widgetPanel = document.getElementById(`${widgetData.size}-widget-container`);;
@@ -73,8 +67,6 @@ dashboard.controller('DashboardController', ['$scope', '$http', 'messageHub', fu
             console.error('Widget container not found');
         }
     }
-
-
 
     messageHub.onDidReceiveMessage(
         "contextmenu",
