@@ -18,6 +18,12 @@
             "type": "git",
             "url": "https://github.com/codbex/codbex-payments.git",
             "branch": "main"
+        },
+        {
+            "guid": "codbex-templates",
+            "type": "git",
+            "url": "https://github.com/codbex/codbex-templates.git",
+            "branch": "main"
         }
     ],
     "actions": [
